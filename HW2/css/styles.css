@@ -1,0 +1,16 @@
+html {
+    background-color: #b5838d;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    border-radius: 15%;
+}
+
+.page--title {
+    color: #ffcdb2;
+}
+
+.hobby--title {
+    color: #ffb4a2;
+}
