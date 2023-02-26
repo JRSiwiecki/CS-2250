@@ -33,7 +33,8 @@ table.pr--table {
   margin: 0 auto;
 }
 
-ul.hobbies--list {
+ul.hobbies--list,
+ul.game--list {
   list-style: inside;
 }
 
