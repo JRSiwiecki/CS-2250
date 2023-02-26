@@ -36,3 +36,8 @@ table.pr--table {
 ul.hobbies--list {
   list-style: inside;
 }
+
+img.mosaic--image {
+  width: 320px;
+  height: 180px;
+}
