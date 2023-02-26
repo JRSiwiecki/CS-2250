@@ -1,36 +1,38 @@
 html {
-    background-color: #b5838d;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
+  background-color: #b5838d;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
 }
 
 img {
-    border-color: #6d6875;
-    border-radius: 15%;
-    border-style: dashed;
-    margin: 2.5% 5%;
+  border-color: #6d6875;
+  border-radius: 15%;
+  border-style: dashed;
+  margin: 2.5% 5%;
 }
 
 td {
-    border: 5%;
+  border: 5%;
 }
 
-.page--title {
-    color: #ffcdb2;
+h1.page--title {
+  color: #ffcdb2;
 }
 
-.portfolio--title {
-    color: #e5989b;
+h2.portfolio--title {
+  color: #e5989b;
 }
 
-.hobby--title, .project--title, .about--me--title {
-    color: #ffb4a2;
+h3.hobby--title,
+h3.project--title,
+h3.about--me--title {
+  color: #ffb4a2;
 }
 
-.pr--table {
-    margin: 0 auto;
+table.pr--table {
+  margin: 0 auto;
 }
 
-.hobbies--list {
-    list-style: inside;
+ul.hobbies--list {
+  list-style: inside;
 }
