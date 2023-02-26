@@ -1,0 +1,36 @@
+html {
+    background-color: #b5838d;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+img {
+    border-color: #6d6875;
+    border-radius: 15%;
+    border-style: dashed;
+    margin: 2.5% 5%;
+}
+
+td {
+    border: 5%;
+}
+
+.page--title {
+    color: #ffcdb2;
+}
+
+.portfolio--title {
+    color: #e5989b;
+}
+
+.hobby--title, .project--title, .about--me--title {
+    color: #ffb4a2;
+}
+
+.pr--table {
+    margin: 0 auto;
+}
+
+.hobbies--list {
+    list-style: inside;
+}
