@@ -41,3 +41,28 @@ img.mosaic--image {
   width: 320px;
   height: 180px;
 }
+
+ul.nav--list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+li.nav--item:last-child {
+  border-left: 1px solid white;
+}
+
+a.nav--link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: #815b5b;
+}
+
+.nav--item .nav--link:hover {
+  color: #2c3639;
+}
