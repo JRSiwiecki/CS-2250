@@ -20,7 +20,7 @@ h1.page--title {
 }
 
 h2.portfolio--title {
-  color: #e5989b;
+  color: #f2d1d1;
 }
 
 h2.hobby--title,
@@ -34,7 +34,8 @@ table.pr--table {
 }
 
 ul.hobbies--list,
-ul.game--list {
+ul.game--list,
+ul.portfolio--list {
   list-style: inside;
 }
 
