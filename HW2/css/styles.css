@@ -1,4 +1,4 @@
-/* Still need 11, 13, 16, 17, G, H */
+/* Still need 11, 13, 16, 17 */
 /* Colors: #181823, #537FE7, #C0EEF2, #E9F8F9 */
 
 html {
@@ -9,7 +9,6 @@ html {
 }
 
 hr {
-  flex-grow: 1;
   width: 100%;
 }
 
@@ -17,7 +16,7 @@ img {
   border-color: #6d6875; /* Requirement-2.5 */
   border-radius: 15%; /* Requirement-2.10 */
   border-style: inset;
-  margin: 2.5% 5%; /* Requirement-2.6 */
+  margin: 1.5% 3.5%; /* Requirement-2.6 */
 }
 
 td {
@@ -27,6 +26,7 @@ td {
 p {
   color: #e9f8f9;
   font-size: large;
+  max-width: 35%;
 }
 
 figcaption {
@@ -42,11 +42,24 @@ tr td {
   color: #e9f8f9;
 }
 
-details summary {
+details summary /* Requirement-2.H */ {
   color: #537fe7;
 }
 
-.home--body {
+details /* Requirement-2.G */ {
+  color: #e9f8f9;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.home--body,
+.hobbies-body,
+.portfolio--body {
   display: flex;
   flex-direction: column;
   justify-content: center;
