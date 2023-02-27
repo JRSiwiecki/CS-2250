@@ -1,4 +1,4 @@
-/* Still need 16, 17 */
+/* Still need 17 */
 /* Colors: #181823, #537FE7, #C0EEF2, #E9F8F9 */
 
 html {
@@ -52,6 +52,13 @@ details summary /* Requirement-2.H */ {
 
 details /* Requirement-2.G */ {
   color: #e9f8f9;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -181,4 +188,8 @@ div.space--image--container {
 
 .contact--header {
   color: #537fe7;
+}
+
+p.secret--text {
+  visibility: collapse; /* Requirement-2.16 */
 }
