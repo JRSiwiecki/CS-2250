@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Hobbies</title>
@@ -74,95 +74,105 @@
     </p>
 
     <figure>
-      <img
-        src="images/joe%203200%20flex.jpg"
-        alt="Me flexing after running a 10:00.33 3200 as my new pr!"
-        width="320"
-      />
-      <figcaption>
+      <div class="joe--pr--container">
+        <img
+          class="joe--flex--img"
+          src="images/joe%203200%20flex.jpg"
+          alt="Me flexing after running a 10:00.33 3200 as my new pr!"
+          width="320"
+        />
+
+        <!-- Requirement-1.O -->
+        <table class="pr--table">
+          <thead>
+            <tr>
+              <th>Event (km/mi/m)</th>
+              <th>Time (mm:ss.ms)</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>10 km</td>
+              <!-- Requirement-1.I -->
+              <td>
+                <a href="https://www.strava.com/activities/2490136106"
+                  >39:56.00 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>4 mi</td>
+              <td>
+                <a href="https://www.strava.com/activities/5830375166"
+                  >25:16.00 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>5 km</td>
+              <td>
+                <a href="https://www.strava.com/activities/2269393645"
+                  >17:25.00 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>3 mi</td>
+              <td>
+                <a href="https://www.strava.com/activities/2783227628"
+                  >15:57.30 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>3200 m</td>
+              <td>
+                <a href="https://www.strava.com/activities/3160774054"
+                  >10:00.33 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>1600 m</td>
+              <td>
+                <a href="https://www.strava.com/activities/3122936482"
+                  >4:40.64 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>800 m</td>
+              <td>
+                <a href="https://www.strava.com/activities/3123249027"
+                  >2:06.47 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>400 m</td>
+              <td>
+                <a href="https://www.strava.com/activities/2300878259"
+                  >58:00.0 s</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figcaption class="joe--flex--caption">
         Me after running a 10:00.33 3200 m as my new PR at the Condor Distance
         Carnival in March 2020.
       </figcaption>
     </figure>
-
-    <!-- Requirement-1.O -->
-    <table class="pr--table">
-      <thead>
-        <tr>
-          <th>Event (km/mi/m)</th>
-          <th>Time (mm:ss.ms)</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>10 km</td>
-          <!-- Requirement-1.I -->
-          <td>
-            <a href="https://www.strava.com/activities/2490136106"
-              >39:56.00 s</a
-            >
-          </td>
-        </tr>
-
-        <tr>
-          <td>4 mi</td>
-          <td>
-            <a href="https://www.strava.com/activities/5830375166"
-              >25:16.00 s</a
-            >
-          </td>
-        </tr>
-
-        <tr>
-          <td>5 km</td>
-          <td>
-            <a href="https://www.strava.com/activities/2269393645"
-              >17:25.00 s</a
-            >
-          </td>
-        </tr>
-
-        <tr>
-          <td>3 mi</td>
-          <td>
-            <a href="https://www.strava.com/activities/2783227628"
-              >15:57.30 s</a
-            >
-          </td>
-        </tr>
-
-        <tr>
-          <td>3200 m</td>
-          <td>
-            <a href="https://www.strava.com/activities/3160774054"
-              >10:00.33 s</a
-            >
-          </td>
-        </tr>
-
-        <tr>
-          <td>1600 m</td>
-          <td>
-            <a href="https://www.strava.com/activities/3122936482">4:40.64 s</a>
-          </td>
-        </tr>
-
-        <tr>
-          <td>800 m</td>
-          <td>
-            <a href="https://www.strava.com/activities/3123249027">2:06.47 s</a>
-          </td>
-        </tr>
-
-        <tr>
-          <td>400 m</td>
-          <td>
-            <a href="https://www.strava.com/activities/2300878259">58:00.0 s</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
     <hr />
 

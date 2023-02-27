@@ -1,4 +1,4 @@
-/* Still need 11, 13, 16, 17 */
+/* Still need 16, 17 */
 /* Colors: #181823, #537FE7, #C0EEF2, #E9F8F9 */
 
 html {
@@ -81,12 +81,30 @@ h3.about--me--title /* Requirement-2.B */ {
   color: #c0eef2;
 }
 
+.joe--pr--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.joe--flex--img {
+  float: left; /* Requirement-2.11 */
+}
+
+.joe--flex--caption {
+  clear: both; /* Requirement-2.13 */
+  float: none;
+}
+
 .intro--text {
   width: 50%;
 }
 
 table.pr--table {
   margin: 0 auto;
+  clear: none;
+  display: inline;
 }
 
 ul.hobbies--list,
