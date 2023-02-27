@@ -29,6 +29,10 @@ p {
   max-width: 35%;
 }
 
+ul {
+  padding-left: 0px;
+}
+
 figcaption {
   color: #e9f8f9;
   font-style: italic;
@@ -152,7 +156,8 @@ div.space--image--container {
 }
 
 .game--list li,
-.hobbies--list li {
+.hobbies--list li,
+.portfolio--list li {
   color: #e9f8f9;
 }
 
