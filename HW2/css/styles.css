@@ -1,16 +1,22 @@
 /* Still need 11, 13, 16, 17, G, H */
+/* Colors: #181823, #537FE7, #C0EEF2, #E9F8F9 */
 
 html {
   /* Requirement-2.A */
-  background-color: #b5838d; /* Requirement-2.4 */
+  background-color: #181823; /* Requirement-2.4 */
   font-family: "Open Sans", sans-serif; /* Requirement-2.1 */
-  text-align: center; /* Requirement-2.2 */
+  text-align: center;
+}
+
+hr {
+  flex-grow: 1;
+  width: 100%;
 }
 
 img {
   border-color: #6d6875; /* Requirement-2.5 */
   border-radius: 15%; /* Requirement-2.10 */
-  border-style: dashed;
+  border-style: inset;
   margin: 2.5% 5%; /* Requirement-2.6 */
 }
 
@@ -18,18 +24,48 @@ td {
   border: 5%;
 }
 
+p {
+  color: #e9f8f9;
+  font-size: large;
+}
+
+figcaption {
+  color: #e9f8f9;
+  font-style: italic;
+}
+
+tr th {
+  color: #c0eef2;
+}
+
+tr td {
+  color: #e9f8f9;
+}
+
+details summary {
+  color: #537fe7;
+}
+
+.home--body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .page--title /* Requirement-2.C */ {
-  color: #ffcdb2; /* Requirement-2.3 */
+  color: #537fe7; /* Requirement-2.3 */
 }
 
-h2.portfolio--title {
-  color: #f2d1d1;
-}
-
+h2.portfolio--title,
 h2.hobby--title,
 h3.project--title,
 h3.about--me--title /* Requirement-2.B */ {
-  color: #ffb4a2;
+  color: #c0eef2;
+}
+
+.intro--text {
+  width: 50%;
 }
 
 table.pr--table {
@@ -65,7 +101,7 @@ a.nav--link {
   color: white;
   text-align: center;
   padding: 14px 16px;
-  background-color: #815b5b;
+  background-color: #537fe7;
 }
 
 .nav--item .nav--link:hover /* Requirement-2.F */ {
@@ -101,4 +137,13 @@ div.space--image--container {
 
 #joe--image /* Requirement-2.D */ {
   clear: none;
+}
+
+.game--list li,
+.hobbies--list li {
+  color: #e9f8f9;
+}
+
+.contact--header {
+  color: #537fe7;
 }
