@@ -147,7 +147,7 @@ ul.portfolio--list {
 ul.nav--list {
   list-style-type: none;
   margin: auto;
-  padding: 31px 0px;
+  padding: 38px 0px;
   overflow: hidden; /* Requirement-2.14 */
   display: flex; /* Requirement-2.12 */
   justify-content: center;
