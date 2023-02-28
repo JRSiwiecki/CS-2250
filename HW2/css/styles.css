@@ -6,6 +6,7 @@ html {
   /* Requirement-2.A */
   background-color: #181823; /* Requirement-2.4 */
   font-family: "Open Sans", sans-serif; /* Requirement-2.1 */
+  font-size: x-large;
   letter-spacing: 0.12rem;
   text-align: center; /* Requirement-2.2 */
 }
@@ -27,7 +28,6 @@ td {
 
 p {
   color: #e9f8f9;
-  font-size: large;
   max-width: 35%;
 }
 
