@@ -7,7 +7,7 @@ html {
   background-color: #181823; /* Requirement-2.4 */
   font-family: "Open Sans", sans-serif; /* Requirement-2.1 */
   letter-spacing: 0.12rem;
-  text-align: center;
+  text-align: center; /* Requirement-2.2 */
 }
 
 hr {
