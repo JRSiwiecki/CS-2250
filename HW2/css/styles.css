@@ -31,10 +31,6 @@ p {
   max-width: 35%;
 }
 
-a:visited {
-  color: #537fe7;
-}
-
 a:hover {
   color: #e9f8f9;
 }
