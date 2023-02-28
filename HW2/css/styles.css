@@ -31,6 +31,14 @@ p {
   max-width: 35%;
 }
 
+a:visited {
+  color: #537fe7;
+}
+
+a:hover {
+  color: #e9f8f9;
+}
+
 ul {
   padding-left: 0px;
 }
@@ -42,10 +50,12 @@ figcaption {
 
 tr th {
   color: #c0eef2;
+  padding: 5px 15px;
 }
 
 tr td {
   color: #e9f8f9;
+  padding: 2.5px;
 }
 
 details summary /* Requirement-2.H */ {
