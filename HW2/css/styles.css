@@ -6,6 +6,7 @@ html {
   /* Requirement-2.A */
   background-color: #181823; /* Requirement-2.4 */
   font-family: "Open Sans", sans-serif; /* Requirement-2.1 */
+  letter-spacing: 0.12rem;
   text-align: center;
 }
 
@@ -128,29 +129,48 @@ ul.portfolio--list {
   height: 180px; /* Requirement-2.9 */
 }
 
+/* 
+  Currently, when you go from the home page to
+  hobbies or portfolio page, the navbar moves slightly left.
+  I can't figure out why.
+
+  EDIT: Not sure why, but making padding on 
+  top and bottom = at least 31 px fixes it!
+*/
+
 ul.nav--list {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: 31px 0px;
   overflow: hidden; /* Requirement-2.14 */
   display: flex; /* Requirement-2.12 */
   justify-content: center;
 }
 
-li.nav--item:last-child /* Requirement-2.E */ {
-  border-left: 1px solid white;
+.nav--item:not(:first-child):not(:last-child) .nav--link {
+  border-left: 0px;
+  border-right: 0px;
 }
 
 a.nav--link {
   display: block;
-  color: white;
-  text-align: center;
+  color: #c0eef2;
   padding: 14px 16px;
-  background-color: #537fe7;
+  background-color: #181823;
+  text-decoration: none;
 }
 
-.nav--item .nav--link:hover /* Requirement-2.F */ {
-  color: #2c3639;
+.nav--item .nav--link /* Requirement-2.F */ {
+  border: 1px solid #537fe7;
+}
+
+.nav--item .nav--link:hover /* Requirement-2.E */ {
+  background-color: #537fe7;
+  color: #c0eef2;
+}
+
+.nav--item .nav--link.nav--active {
+  background-color: #537fe7;
 }
 
 div.mosaic--image--container {
