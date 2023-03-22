@@ -1,36 +1,256 @@
+/* Colors: #181823, #537FE7, #C0EEF2, #E9F8F9 */
+
+/* ELEMENT SELECTORS */
+
 html {
-    background-color: #b5838d;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
+  /* Requirement-2.A */
+  background-color: #181823; /* Requirement-2.4 */
+  font-family: "Open Sans", sans-serif; /* Requirement-2.1 */
+  font-size: x-large;
+  letter-spacing: 0.12rem;
+  text-align: center; /* Requirement-2.2 */
+}
+
+hr {
+  width: 100%;
 }
 
 img {
-    border-color: #6d6875;
-    border-radius: 15%;
-    border-style: dashed;
-    margin: 2.5% 5%;
+  border-color: #6d6875; /* Requirement-2.5 */
+  border-radius: 15%; /* Requirement-2.10 */
+  border-style: inset;
+  margin: 1.5% 3.5%; /* Requirement-2.6 */
 }
 
 td {
-    border: 5%;
+  margin: 5px;
 }
 
-.page--title {
-    color: #ffcdb2;
+p {
+  color: #e9f8f9;
+  max-width: 35%;
 }
 
-.portfolio--title {
-    color: #e5989b;
+a:hover {
+  color: #e9f8f9;
 }
 
-.hobby--title, .project--title, .about--me--title {
-    color: #ffb4a2;
+ul {
+  padding-left: 0px;
 }
 
-.pr--table {
-    margin: 0 auto;
+figcaption {
+  color: #e9f8f9;
+  font-style: italic;
 }
 
-.hobbies--list {
-    list-style: inside;
+tr th {
+  color: #c0eef2;
+  padding: 5px 15px;
+}
+
+tr td {
+  color: #e9f8f9;
+  padding: 2.5px;
+}
+
+details summary /* Requirement-2.H */ {
+  color: #537fe7;
+}
+
+details /* Requirement-2.G */ {
+  color: #e9f8f9;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* CLASS SELECTORS */
+
+.home--body,
+.hobbies-body,
+.portfolio--body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page--title /* Requirement-2.C */ {
+  color: #537fe7; /* Requirement-2.3 */
+}
+
+h2.portfolio--title,
+h2.hobby--title,
+h3.project--title,
+h3.about--me--title /* Requirement-2.B */ {
+  color: #c0eef2;
+}
+
+.joe--pr--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.joe--flex--img {
+  float: left; /* Requirement-2.11 */
+}
+
+.joe--flex--caption {
+  clear: both; /* Requirement-2.13 */
+  float: none;
+}
+
+.intro--text {
+  width: 50%;
+}
+
+table.pr--table {
+  margin: 0 auto;
+  clear: none;
+  display: inline;
+}
+
+ul.hobbies--list,
+ul.game--list,
+ul.portfolio--list {
+  list-style: inside; /* Requirement-2.8 */
+}
+
+.mosaic--image {
+  width: 320px; /* Requirement-2.7 */
+  height: 180px; /* Requirement-2.9 */
+}
+
+/* 
+  Currently, when you go from the home page to
+  hobbies or portfolio page, the navbar moves slightly left.
+  I can't figure out why.
+
+  EDIT: Not sure why, but making padding on 
+  top and bottom = at least 31 px fixes it!
+*/
+
+ul.nav--list {
+  list-style-type: none;
+  margin: auto;
+  padding: 38px 0px;
+  overflow: hidden; /* Requirement-2.14 */
+  display: flex; /* Requirement-2.12 */
+  justify-content: center;
+}
+
+.nav--item:not(:first-child):not(:last-child) .nav--link {
+  border-left: 0px;
+  border-right: 0px;
+}
+
+a.nav--link {
+  display: block;
+  color: #c0eef2;
+  padding: 14px 16px;
+  background-color: #181823;
+  text-decoration: none;
+}
+
+.nav--item .nav--link /* Requirement-2.F */ {
+  border: 1px solid #537fe7;
+}
+
+.nav--item .nav--link:hover /* Requirement-2.E */ {
+  background-color: #537fe7;
+  color: #c0eef2;
+}
+
+.nav--item .nav--link.nav--active {
+  background-color: #537fe7;
+}
+
+div.mosaic--image--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 150px 0px;
+}
+
+.mosaic--image--1 {
+  margin: 0;
+  position: relative;
+  z-index: -3; /* Requirement-2.17 */
+  bottom: 100px;
+  left: 150px;
+}
+
+.mosaic--image--2 {
+  margin: 0;
+  position: relative;
+  z-index: -2;
+  right: 50px;
+}
+
+.mosaic--image--3 {
+  margin: 0;
+  position: relative;
+  z-index: -1;
+  right: 200px;
+  top: 100px;
+}
+
+div.space--image--container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Creating a more response iframe! */
+/* Follows a 16:9 aspect ratio. */
+.osu--figure {
+  position: relative; /* Requirement-2.15 */
+  overflow: hidden;
+  width: 100%;
+}
+
+.osu--video {
+  aspect-ratio: 16/9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 75%;
+  height: 75%;
+}
+
+.game--list li,
+.hobbies--list li,
+.portfolio--list li {
+  color: #e9f8f9;
+}
+
+.contact--header {
+  color: #537fe7;
+}
+
+p.secret--text {
+  visibility: collapse; /* Requirement-2.16 */
+}
+
+/* ID SELECTORS */
+
+#joe--image /* Requirement-2.D */ {
+  height: 480px;
+  width: auto;
 }

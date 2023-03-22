@@ -1,181 +1,263 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        
-        <meta charset="utf-8">
-        <title>Hobbies</title>
-        <link rel="stylesheet" href="css/styles.css">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hobbies</title>
+    <link rel="stylesheet" href="css/styles.css" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet"> 
-        
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <body>
-        
-        <header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="portfolio.html">Portfolio</a>
-            </nav>
-            
-            <hr>
-        </header>
-        
-        <h1 class="page--title">Hobbies</h1>
-        
-        <!-- Requirement-1.K -->
-        <ul class="hobbies--list">
-            <li>Spending time with my girlfriend</li>
-            <li>Running</li>
-            <li>Volleyball</li>
-            <li>Listening to music</li>
-            <li>Playing video games </li>
+  <body class="hobbies-body">
+    <header>
+      <nav>
+        <ul class="nav--list">
+          <li class="nav--item">
+            <a class="nav--link" href="index.html">Home</a>
+          </li>
+          <li class="nav--item">
+            <a class="nav--link nav--active" href="hobbies.html">Hobbies</a>
+          </li>
+          <li class="nav--item">
+            <a class="nav--link" href="portfolio.html">Portfolio</a>
+          </li>
         </ul>
-        
-        <hr>
-        
-        <h2 class="hobby--title">My Girlfriend and I</h2>
-        <p>We have been dating since 2017! :)</p>
-        
-        <!-- Requirement-1.L -->
-        <figure>
-            <img src="images/denise%20and%20i%20christmas.jpg" alt="My girlfriend and I (Christmas 2022)" width="320">
-            <img src="images/denise%20and%20i%20hoco.jpg" alt="My girlfriend and I (Homecoming 2020)" width="320">
-            
-            <!-- Requirement-1.M -->
-            <figcaption>My girlfriend and I last Christmas (Left), and us at Homecoming of our Senior Year in High School (Right)</figcaption>
-        </figure>
-        
-        
-        
-        
-        <hr>
-        
-        <h2 class="hobby--title">XC & Track Personal Records</h3>
-        <p>I don't run as much nowadays, as I mostly quit during the pandemic, but I look back fondly and run somewhat still just to stay healthy!</p>
-        
-        <figure>
-            <img src="images/joe%203200%20flex.jpg" alt="Me flexing after running a 10:00.33 3200 as my new pr!" width="320">
-            <figcaption>Me after running a 10:00.33 3200 m as my new PR at the Condor Distance Carnival in March 2020.</figcaption>
-        </figure>
-        
-        
+      </nav>
+    </header>
+
+    <hr />
+
+    <h1 class="page--title">Hobbies</h1>
+
+    <!-- Requirement-1.K -->
+    <ul class="hobbies--list">
+      <li>Spending time with my girlfriend</li>
+      <li>Running</li>
+      <li>Volleyball</li>
+      <li>Listening to music</li>
+      <li>Playing video games</li>
+    </ul>
+
+    <hr />
+
+    <h2 class="hobby--title">My Girlfriend and I</h2>
+    <p>We have been dating since 2017! :)</p>
+
+    <!-- Requirement-1.L -->
+    <figure>
+      <img
+        src="images/denise%20and%20i%20christmas.jpg"
+        alt="My girlfriend and I (Christmas 2022)"
+        width="320"
+      />
+      <img
+        src="images/denise%20and%20i%20hoco.jpg"
+        alt="My girlfriend and I (Homecoming 2020)"
+        width="320"
+      />
+
+      <!-- Requirement-1.M -->
+      <figcaption>
+        My girlfriend and I last Christmas (Left), and us at Homecoming of our
+        Senior Year in High School (Right)
+      </figcaption>
+    </figure>
+
+    <hr />
+
+    <h2 class="hobby--title">XC & Track Personal Records</h2>
+    <p>
+      I don't run as much nowadays, as I mostly quit during the pandemic, but I
+      look back fondly and run somewhat still just to stay healthy!
+    </p>
+
+    <figure>
+      <div class="joe--pr--container">
+        <img
+          class="joe--flex--img"
+          src="images/joe%203200%20flex.jpg"
+          alt="Me flexing after running a 10:00.33 3200 as my new pr!"
+          width="320"
+        />
 
         <!-- Requirement-1.O -->
         <table class="pr--table">
-            <thead>
-                <tr>
-                    <th>Event (km/mi/m)</th>
-                    <th>Time (mm:ss.ms)</th>
-                </tr>
+          <thead>
+            <tr>
+              <th>Event (km/mi/m)</th>
+              <th>Time (mm:ss.ms)</th>
+            </tr>
+          </thead>
 
-            </thead>
-            
-            <tbody>
-                
-                <tr>
-                    <td>10 km</td>
-                    <!-- Requirement-1.I -->
-                    <td> <a href="https://www.strava.com/activities/2490136106">39:56.00 s</a> </td>
-                </tr>
-                
-                <tr>
-                    <td>4 mi</td>
-                    <td> <a href="https://www.strava.com/activities/5830375166">25:16.00 s</a> </td>
-                </tr>
+          <tbody>
+            <tr>
+              <td>10 km</td>
+              <!-- Requirement-1.I -->
+              <td>
+                <a href="https://www.strava.com/activities/2490136106"
+                  >39:56.00 s</a
+                >
+              </td>
+            </tr>
 
-                <tr>
-                    <td>5 km</td>
-                    <td><a href="https://www.strava.com/activities/2269393645">17:25.00 s</a></td>
-                </tr>
-                
-                <tr>
-                    <td>3 mi</td>
-                    <td><a href="https://www.strava.com/activities/2783227628">15:57.30 s</a></td>
-                </tr>
-                
-                <tr>
-                    <td>3200 m</td>
-                    <td><a href="https://www.strava.com/activities/3160774054">10:00.33 s</a></td>
-                </tr>
+            <tr>
+              <td>4 mi</td>
+              <td>
+                <a href="https://www.strava.com/activities/5830375166"
+                  >25:16.00 s</a
+                >
+              </td>
+            </tr>
 
-                <tr>
-                    <td>1600 m</td>
-                    <td><a href="https://www.strava.com/activities/3122936482">4:40.64 s</a></td>
-                </tr> 
-                
-                
-                
-                <tr>
-                    <td>800 m</td>
-                    <td><a href="https://www.strava.com/activities/3123249027">2:06.47 s</a></td>
-                </tr>
-                
-                <tr>
-                    <td>400 m</td>
-                    <td> <a href="https://www.strava.com/activities/2300878259">58:00.0 s</a></td>
-                </tr>
+            <tr>
+              <td>5 km</td>
+              <td>
+                <a href="https://www.strava.com/activities/2269393645"
+                  >17:25.00 s</a
+                >
+              </td>
+            </tr>
 
-            </tbody>
+            <tr>
+              <td>3 mi</td>
+              <td>
+                <a href="https://www.strava.com/activities/2783227628"
+                  >15:57.30 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>3200 m</td>
+              <td>
+                <a href="https://www.strava.com/activities/3160774054"
+                  >10:00.33 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>1600 m</td>
+              <td>
+                <a href="https://www.strava.com/activities/3122936482"
+                  >4:40.64 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>800 m</td>
+              <td>
+                <a href="https://www.strava.com/activities/3123249027"
+                  >2:06.47 s</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>400 m</td>
+              <td>
+                <a href="https://www.strava.com/activities/2300878259"
+                  >58:00.0 s</a
+                >
+              </td>
+            </tr>
+          </tbody>
         </table>
+      </div>
 
-        <hr>
-        
-        <h2 class="hobby--title">My Very Bad Volleyball Form</h2>   
-        <p>I picked up volleyball my 2nd year here at CPP, and I'm still really bad but I enjoy it very much!</p>
+      <figcaption class="joe--flex--caption">
+        Me after running a 10:00.33 3200 m as my new PR at the Condor Distance
+        Carnival in March 2020.
+      </figcaption>
+    </figure>
 
-        <figure>
-            <img src="images/joe%20volleyball%20serve.jpg" alt="Me serving a volleyball very badly!" width="320">
-            <figcaption>Me practicing my serve about a month after I started playing volleyball. (I'm not very good!)</figcaption>
-        </figure>
-        
-        
+    <hr />
 
-        <hr>
+    <h2 class="hobby--title">My Very Bad Volleyball Form</h2>
+    <p>
+      I picked up volleyball my 2nd year here at CPP, and I'm still really bad
+      but I enjoy it very much!
+    </p>
 
-        <h2 class="hobby--title">Emo Nite with Denise</h2>
-        <p>I listen to a lot of different kinds of music, but I enjoy going to "Emo Nite" which is a live DJ set where they just play classic emo songs!</p>
+    <figure>
+      <img
+        src="images/joe%20volleyball%20serve.jpg"
+        alt="Me serving a volleyball very badly!"
+        width="320"
+      />
+      <figcaption>
+        Me practicing my serve about a month after I started playing volleyball.
+        (I'm not very good!)
+      </figcaption>
+    </figure>
 
-        <figure>
-            <img src="images/denise%20and%20i%20emo%20nite.jpg" alt="Denise and I ate Emo Nite (2023)" width="320">
-            <figcaption>Denise and I at our 2nd Emo Nite event together in January 2023!</figcaption>
-        </figure>
-        
-        
+    <hr />
 
-        <hr>
+    <h2 class="hobby--title">Emo Nite with Denise</h2>
+    <p>
+      I listen to a lot of different kinds of music, but I enjoy going to "Emo
+      Nite" which is a live DJ set where they just play classic emo songs!
+    </p>
 
-        <h2 class="hobby--title">Video Games I Enjoy</h2>
-        <p>I have been playing video games since I first learned how to use a computer nearly 15 years ago!</p>
+    <figure>
+      <img
+        src="images/denise%20and%20i%20emo%20nite.jpg"
+        alt="Denise and I ate Emo Nite (2023)"
+        width="320"
+      />
+      <figcaption>
+        Denise and I at our 2nd Emo Nite event together in January 2023!
+      </figcaption>
+    </figure>
 
-        <ul>
-            <li>Elden Ring</li>
-            <li>Red Dead Redemption 2</li>
-            <li>Fallout: New Vegas</li>
-            <li>Inscryption</li>
-            <li>Sea of Thieves</li>
-        </ul>
+    <hr />
 
-        <p>I am also globally ranked around 5,500 out of nearly 20,000,000 registered players in the rhythm game osu! </p>
-        <a href="https://osu.ppy.sh/users/6124459">osu! Profile</a>
-        <br>
+    <h2 class="hobby--title">Video Games I Enjoy</h2>
+    <p>
+      I have been playing video games since I first learned how to use a
+      computer nearly 15 years ago!
+    </p>
 
-        <figure>
-            <iframe src="https://www.youtube.com/embed/zPgf9KKZkYE" frameborder="0" width="640" height="360">
-            
-            </iframe>
-            <figcaption>One of my most popular videos of my osu! plays, at 4.8K views!</figcaption>
-        </figure>
+    <ul class="game--list">
+      <li>Elden Ring</li>
+      <li>Red Dead Redemption 2</li>
+      <li>Fallout: New Vegas</li>
+      <li>Inscryption</li>
+      <li>Sea of Thieves</li>
+    </ul>
 
-        <hr>
-        
-        <footer>
-            <h3>Contact Info</h3>
-        
-            <p><strong>Email</strong>: jrsiwiecki@cpp.edu</p>
-        </footer>
-        
-    </body>
+    <p>
+      I am also globally ranked around 5,500 out of nearly 20,000,000 registered
+      players in the rhythm game osu!
+    </p>
+    <a href="https://osu.ppy.sh/users/6124459">osu! Profile</a>
+    <br />
+
+    <figure class="osu--figure">
+      <iframe
+        class="osu--video"
+        src="https://www.youtube.com/embed/zPgf9KKZkYE"
+        width="640"
+        height="360"
+      >
+      </iframe>
+      <figcaption>
+        One of my most popular videos of my osu! plays, at 4.8K views!
+      </figcaption>
+    </figure>
+
+    <hr />
+
+    <footer>
+      <h3 class="contact--header">Contact Info</h3>
+
+      <p><strong>Email</strong>: jrsiwiecki@cpp.edu</p>
+    </footer>
+  </body>
 </html>
