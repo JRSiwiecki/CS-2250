@@ -4,6 +4,7 @@
 
 html {
   background-color: #867070;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -22,13 +23,12 @@ label {
 }
 
 form {
-  display: grid;
-  grid-template-columns: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-container {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  grid-gap: 5px;
-  margin: 5px;
+  margin: 7.5px;
 }
