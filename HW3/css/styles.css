@@ -1,0 +1,34 @@
+/* 
+  Colors: #867070, #D5B4B4, #E4D0D0, #F5EBEB
+*/
+
+html {
+  background-color: #867070;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  color: #d5b4b4;
+}
+
+label {
+  color: #f5ebeb;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 4;
+}
+
+.input-container {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 5px;
+  margin: 5px;
+}
