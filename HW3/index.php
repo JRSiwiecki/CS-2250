@@ -40,6 +40,11 @@
                 <input type="text" name="email-2" id="email-2">
             </div>
 
+
+            <div class="input-container">
+                <input type="submit" value="Submit">
+            </div>
+
         </form>
 
     </body>
