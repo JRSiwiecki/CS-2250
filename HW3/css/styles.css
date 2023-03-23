@@ -14,21 +14,41 @@ body {
   text-align: center;
 }
 
-h1 {
+.title {
   color: #d5b4b4;
 }
 
-label {
-  color: #f5ebeb;
-}
-
-form {
+.form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+}
+
+.input-label {
+  color: #f5ebeb;
+  display: inline-block;
+  width: 240px;
+  text-align: left;
+}
+
+.text-input {
+  width: 200px;
+  height: 30px;
+  border-radius: 7.5px;
 }
 
 .input-container {
   margin: 7.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 500px;
+}
+
+.input-btn {
+  margin-top: 7.5px;
+  width: auto;
+  height: 25px;
+  position: relative;
+  left: 200px;
 }
