@@ -51,6 +51,24 @@
             <input type="password" name="password" id="password" class="text-input" placeholder="Password" required>
         </div>
 
+        <?php 
+
+        $fname = $_POST["fname"];
+        $lname = $_POST["lname"];
+        $email1 = $_POST["email-1"];
+        $email2 = $_POST["email-2"];
+        $password = $_POST["password"];
+        
+
+        if (empty($fname) || empty($lname) || empty($email1) || empty($email2) || empty($password)) {
+            echo "<p>Not all text inputs are complete!</p>";
+        } else if ($email1 !== $email2) {
+            echo "<p>The emails are not the same!</p>";
+        }
+        
+
+        ?>
+
         <input type="button" value="Check E-mail Similarity" class="similarity-btn">
 
         <h3>Favorite Animal?</h3>
