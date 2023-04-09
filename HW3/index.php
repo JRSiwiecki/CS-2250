@@ -24,49 +24,80 @@
 
     <h1 class="title">Joseph Siwiecki</h1>
 
-    <form action="index.php" method="post" class="form">
+    <?php $fname = $lname = $email1 = $email2 = $password = ""; ?>
+
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form">
 
         <div class="input-container">
             <label for="fname" class="input-label">Enter your first name: </label>
-            <input type="text" name="fname" id="fname" class="text-input" placeholder="First Name" required>
+            <input type="text" name="fname" id="fname" class="text-input" placeholder="First Name"
+                value="<?php echo isset($_POST["fname"]) ? htmlspecialchars($_POST["fname"]) : ""; ?>" required>
         </div>
 
         <div class="input-container">
             <label for="lname" class="input-label">Enter your last name: </label>
-            <input type="text" name="lname" id="lname" class="text-input" placeholder="Last Name" required>
+            <input type="text" name="lname" id="lname" class="text-input" placeholder="Last Name"
+                value="<?php echo isset($_POST["lname"]) ? htmlspecialchars($_POST["lname"]) : ""; ?>" required>
         </div>
 
         <div class="input-container">
             <label for="email-1" class="input-label">Enter your email: </label>
-            <input type="email" name="email-1" id="email-1" class="text-input" placeholder="Email" required>
+            <input type="email" name="email-1" id="email-1" class="text-input" placeholder="Email"
+                value="<?php echo isset($_POST["email-1"]) ? htmlspecialchars($_POST["email-1"]) : ""; ?>" required>
         </div>
 
         <div class="input-container">
             <label for="email-2" class="input-label">Enter your email again: </label>
-            <input type="email" name="email-2" id="email-2" class="text-input" placeholder="Email" required>
+            <input type="email" name="email-2" id="email-2" class="text-input" placeholder="Email"
+                value="<?php echo isset($_POST["email-2"]) ? htmlspecialchars($_POST["email-2"]) : ""; ?>" required>
         </div>
 
         <div class="input-container">
             <label for="password" class="input-label">Enter your password: </label>
-            <input type="password" name="password" id="password" class="text-input" placeholder="Password" required>
+            <input type="password" name="password" id="password" class="text-input" placeholder="Password"
+                value="<?php echo isset($_POST["password"]) ? htmlspecialchars($_POST["password"]) : ""; ?>" required>
         </div>
 
         <?php 
 
-        $fname = $_POST["fname"];
-        $lname = $_POST["lname"];
-        $email1 = $_POST["email-1"];
-        $email2 = $_POST["email-2"];
-        $password = $_POST["password"];
-        
+        // special cleaning function 
+        function clean_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+            if (isset($_POST["fname"])){
+            $fname = clean_input($_POST["fname"]);
+        } 
+
+        if (isset($_POST["lname"])){
+            $lname = clean_input($_POST["lname"]);
+        } 
+
+        if (isset($_POST["email-1"])){
+            $email1 = clean_input($_POST["email-1"]);
+        } 
+
+        if (isset($_POST["email-2"])){
+            $email2 = clean_input($_POST["email-2"]);
+        } 
+
+        if (isset($_POST["password"])){
+            $password = clean_input($_POST["password"]);
+        }    
 
         if (empty($fname) || empty($lname) || empty($email1) || empty($email2) || empty($password)) {
             echo "<p>Not all text inputs are complete!</p>";
         } else if ($email1 !== $email2) {
             echo "<p>The emails are not the same!</p>";
         }
-        
 
+        } 
+        
         ?>
 
         <input type="button" value="Check E-mail Similarity" class="similarity-btn">
@@ -151,7 +182,8 @@
             <label for="text-area-input">Describe the disadvantages of using one or less types of form input validation:
             </label>
             <br>
-            <textarea name="text-area-input" id="text-area-input" cols="60" rows="10"></textarea>
+            <textarea name="text-area-input" id="text-area-input" cols="60" placeholder="Enter response here..."
+                rows="10"><?php echo isset($_POST["text-area-input"]) ? htmlspecialchars($_POST["text-area-input"]) : ""; ?></textarea>
         </div>
 
         <button type="button" class="validate-btn">Validate Form</button>
