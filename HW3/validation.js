@@ -11,9 +11,7 @@ const animalRadios = document.querySelectorAll("input[name='animal-radio'");
 const gameRadios = document.querySelectorAll("input[name='game-radio'");
 
 // grab checkboxes
-const languageBoxes = document.querySelectorAll(
-  "input[name='language-checkbox'"
-);
+const languageBoxes = document.querySelectorAll("input[type='checkbox'");
 
 // grab dropdown menu
 const classDropdown = document.querySelector("#cs-classes");
