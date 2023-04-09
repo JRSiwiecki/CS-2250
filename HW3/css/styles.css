@@ -56,10 +56,13 @@ h3 {
   position: relative;
 }
 
-.input-radio-container {
+.input-radio-container,
+.input-checkbox-container {
   text-align: start;
 }
 
-.input-radio-container input[type="radio"] {
+.input-radio-container input[type="radio"],
+.input-checkbox-container input[type="checkbox"] {
   margin: 5px;
+  margin-left: 20px;
 }

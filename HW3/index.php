@@ -54,7 +54,6 @@
         <h3>Favorite Animal?</h3>
 
         <div class="input-radio-container">
-
             <input type="radio" name="animal-radio" id="dog-radio" value="Dog">
             <label for="dog-radio" class="radio-label">Dog</label>
 
@@ -67,13 +66,11 @@
 
             <input type="radio" name="animal-radio" id="tortoise-radio" value="Tortoise">
             <label for="tortoise-radio" class="radio-label">Tortoise</label>
-
         </div>
 
         <h3>Favorite Game?</h3>
 
         <div class="input-radio-container">
-
             <input type="radio" name="game-radio" id="lol-radio" value="League of Legends">
             <label for="lol-radio" class="radio-label">League of Legends</label>
 
@@ -86,7 +83,46 @@
 
             <input type="radio" name="game-radio" id="tarkov-radio" value="Escape from Tarkov">
             <label for="tarkov-radio" class="radio-label">Escape from Tarkov</label>
+        </div>
 
+        <h3>"Languages" Used in HW3?</h3>
+
+        <div class="input-checkbox-container">
+            <input type="checkbox" name="language-checkbox" id="html-checkbox">
+            <label for="html-checkbox">HTML</label>
+
+            <br>
+
+            <input type="checkbox" name="language-checkbox" id="css-checkbox">
+            <label for="css-checkbox">CSS</label>
+
+            <br>
+
+            <input type="checkbox" name="language-checkbox" id="js-checkbox">
+            <label for="js-checkbox">Javscript</label>
+
+            <br>
+
+            <input type="checkbox" name="language-checkbox" id="php-checkbox">
+            <label for="php-checkbox">PHP</label>
+
+            <br>
+
+            <input type="checkbox" name="language-checkbox" id="rust-checkbox">
+            <label for="rust-checkbox">Rust</label>
+        </div>
+
+        <h3>Favorite CS Class at CPP?</h3>
+
+        <div class="input-container">
+            <label for="cs-classes">Choose a class: </label>
+            <select name="cs-classes" id="cs-classes">
+                <option value="cs-1300">CS 1300 - Discrete Structures</option>
+                <option value="cs-1400">CS 1400 - Intro to Programming and Problem Solving</option>
+                <option value="cs-2250" selected>CS 2250 - Intro to Web Science</option>
+                <option value="cs-2400">CS 2400 - Data Structures and Advanced Programming</option>
+                <option value="cs-4800">CS 4800 - Software Engineering</option>
+            </select>
         </div>
 
         <input type="submit" value="Submit" class="input-btn">
