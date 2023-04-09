@@ -26,6 +26,11 @@ input[type="button"] {
   margin: 5px;
 }
 
+p {
+  color: #8b0000;
+  text-shadow: 1px 1px 2px black;
+}
+
 .title {
   color: #d5b4b4;
 }
