@@ -38,12 +38,12 @@
 
         <div class="input-container">
             <label for="email-1" class="input-label">Enter your email: </label>
-            <input type="text" name="email-1" id="email-1" class="text-input" placeholder="Email" required>
+            <input type="email" name="email-1" id="email-1" class="text-input" placeholder="Email" required>
         </div>
 
         <div class="input-container">
             <label for="email-2" class="input-label">Enter your email again: </label>
-            <input type="text" name="email-2" id="email-2" class="text-input" placeholder="Email" required>
+            <input type="email" name="email-2" id="email-2" class="text-input" placeholder="Email" required>
         </div>
 
         <div class="input-container">
