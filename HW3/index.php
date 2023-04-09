@@ -24,7 +24,13 @@
 
     <h1 class="title">Joseph Siwiecki</h1>
 
-    <?php $fname = $lname = $email1 = $email2 = $password = ""; ?>
+    <?php $fname = $lname = $email1 = $email2 = $password = ""; 
+            $textInputsValid = false;
+            $radioInputsValid1 = false;
+            $radioInputsValid2 = false;
+            $checkBoxInputsValid = false;
+            $textAreaInputValid = false;
+    ?>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form">
 
@@ -94,6 +100,8 @@
                 echo "<p>Not all text inputs are complete!</p>";
             } else if ($email1 !== $email2) {
                 echo "<p>The emails are not the same!</p>";
+            } else {
+                $textInputsValid = true;
             }
         } 
         
@@ -126,6 +134,8 @@
             {
                 if (!isset($_POST["animal-radio"])) {
                     echo "<p>One option must be checked!</p>";
+                } else {
+                    $radioInputsValid1 = true;
                 }
             }
             
@@ -156,6 +166,8 @@
             {
                 if (!isset($_POST["game-radio"])) {
                     echo "<p>One option must be checked!</p>";
+                } else {
+                    $radioInputsValid2 = true;
                 }
             }
             
@@ -164,29 +176,51 @@
         <h3>"Languages" Used in HW3?</h3>
 
         <div class="input-checkbox-container">
-            <input type="checkbox" name="language-checkbox" id="html-checkbox">
+            <input type="checkbox" name="html-checkbox" id="html-checkbox"
+                <?php if (isset($_POST["html-checkbox"])) echo " checked"; ?>>
             <label for="html-checkbox">HTML</label>
 
             <br>
 
-            <input type="checkbox" name="language-checkbox" id="css-checkbox">
+            <input type="checkbox" name="css-checkbox" id="css-checkbox"
+                <?php if (isset($_POST["css-checkbox"])) echo " checked"; ?>>
             <label for="css-checkbox">CSS</label>
 
             <br>
 
-            <input type="checkbox" name="language-checkbox" id="js-checkbox">
+            <input type="checkbox" name="js-checkbox" id="js-checkbox"
+                <?php if (isset($_POST["js-checkbox"])) echo " checked"; ?>>
             <label for="js-checkbox">Javscript</label>
 
             <br>
 
-            <input type="checkbox" name="language-checkbox" id="php-checkbox">
+            <input type="checkbox" name="php-checkbox" id="php-checkbox"
+                <?php if (isset($_POST["php-checkbox"])) echo " checked"; ?>>
             <label for="php-checkbox">PHP</label>
 
             <br>
 
-            <input type="checkbox" name="language-checkbox" id="rust-checkbox">
+            <input type="checkbox" name="rust-checkbox" id="rust-checkbox"
+                <?php if (isset($_POST["rust-checkbox"])) echo " checked"; ?>>
             <label for="rust-checkbox">Rust</label>
         </div>
+
+        <?php 
+            if ($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                // it seems like either i do this or i try to use arrays and i would just rather 
+                // not use arrays for this
+                if (isset($_POST["html-checkbox"]) || 
+                    isset($_POST["css-checkbox"]) || 
+                    isset($_POST["js-checkbox"]) ||
+                    isset($_POST["php-checkbox"]) ||
+                    isset($_POST["rust-checkbox"])) {
+                        $checkBoxInputsValid = true;
+                } else {
+                    echo "<p>At least one option must be checked!</p>";
+                }
+            }
+        ?>
 
         <h3>Favorite CS Class at CPP?</h3>
 
@@ -210,6 +244,19 @@
             <textarea name="text-area-input" id="text-area-input" cols="60" placeholder="Enter response here..."
                 rows="10"><?php echo isset($_POST["text-area-input"]) ? htmlspecialchars($_POST["text-area-input"]) : ""; ?></textarea>
         </div>
+
+        <?php 
+        
+        if ($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                if (isset($_POST["text-area-input"]) && !empty($_POST["text-area-input"])) {
+                    $textAreaInputValid = true;
+                } else {
+                    echo "<p>Type your response into the text area!</p>";
+                }
+            }
+
+        ?>
 
         <button type="button" class="validate-btn">Validate Form</button>
 
