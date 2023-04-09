@@ -14,15 +14,19 @@ body {
   text-align: center;
 }
 
+h3 {
+  text-align: start;
+}
+
 .title {
   color: #d5b4b4;
 }
 
-.form {
+/* .form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
+} */
 
 .input-label {
   color: #f5ebeb;
@@ -50,5 +54,12 @@ body {
   width: auto;
   height: 25px;
   position: relative;
-  left: 200px;
+}
+
+.input-radio-container {
+  text-align: start;
+}
+
+.input-radio-container input[type="radio"] {
+  margin: 5px;
 }
