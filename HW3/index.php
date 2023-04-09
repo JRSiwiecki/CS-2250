@@ -24,12 +24,22 @@
 
     <h1 class="title">Joseph Siwiecki</h1>
 
-    <?php $fname = $lname = $email1 = $email2 = $password = ""; 
-            $textInputsValid = false;
-            $radioInputsValid1 = false;
-            $radioInputsValid2 = false;
-            $checkBoxInputsValid = false;
-            $textAreaInputValid = false;
+    <?php 
+        $fname = $lname = $email1 = $email2 = $password = ""; 
+        
+        $favorite_animal = $favorite_game = "";
+
+        $languages_used = "~ ";
+
+        $favorite_class = $class_code = "";
+
+        $textarea_answer = "";
+
+        $text_inputs_valid = false;
+        $radio_inputs_valid_1 = false;
+        $radio_inputs_valid_2 = false;
+        $checkbox_inputs_valid = false;
+        $textarea_input_valid = false;
     ?>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form">
@@ -97,11 +107,11 @@
             }    
 
             if (empty($fname) || empty($lname) || empty($email1) || empty($email2) || empty($password)) {
-                echo "<p>Not all text inputs are complete!</p>";
+                echo "<h4>Not all text inputs are complete!</h4>";
             } else if ($email1 !== $email2) {
-                echo "<p>The emails are not the same!</p>";
+                echo "<h4>The emails are not the same!</h4>";
             } else {
-                $textInputsValid = true;
+                $text_inputs_valid = true;
             }
         } 
         
@@ -133,9 +143,10 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST")
             {
                 if (!isset($_POST["animal-radio"])) {
-                    echo "<p>One option must be checked!</p>";
+                    echo "<h4>One option must be checked!</h4>";
                 } else {
-                    $radioInputsValid1 = true;
+                    $favorite_animal = $_POST["animal-radio"];
+                    $radio_inputs_valid_1 = true;
                 }
             }
             
@@ -165,9 +176,10 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST")
             {
                 if (!isset($_POST["game-radio"])) {
-                    echo "<p>One option must be checked!</p>";
+                    echo "<h4>One option must be checked!</h4>";
                 } else {
-                    $radioInputsValid2 = true;
+                    $favorite_game = $_POST["game-radio"];
+                    $radio_inputs_valid_2 = true;
                 }
             }
             
@@ -215,25 +227,84 @@
                     isset($_POST["js-checkbox"]) ||
                     isset($_POST["php-checkbox"]) ||
                     isset($_POST["rust-checkbox"])) {
-                        $checkBoxInputsValid = true;
+                        $checkbox_inputs_valid = true;
                 } else {
-                    echo "<p>At least one option must be checked!</p>";
+                    echo "<h4>At least one option must be checked!</h4>";
+                }
+
+                // this is also gross
+                if (isset($_POST["html-checkbox"])) {
+                    $languages_used .= " HTML ~";
+                } 
+                
+                if (isset($_POST["css-checkbox"])) {
+                    $languages_used .= " CSS ~";
+                } 
+                
+                if (isset($_POST["js-checkbox"])) {
+                    $languages_used .= " Javascript ~";
+                } 
+                
+                if (isset($_POST["php-checkbox"])) {
+                    $languages_used .= " PHP ~";
+                } 
+                
+                if (isset($_POST["rust-checkbox"])) {
+                    $languages_used .= " Rust ~";
                 }
             }
         ?>
 
         <h3>Favorite CS Class at CPP?</h3>
 
+        <!-- I could not figure out a way to have one option be selected by default
+            while also repopulating the form later when the form is posted, so I
+            gave up on trying that because my attempt at a solution was becoming too
+            complex, and I figured it just defaults to the first option anyway. -->
         <div class="input-container">
             <label for="cs-classes">Choose a class: </label>
             <select name="cs-classes" id="cs-classes">
-                <option value="cs-1300">CS 1300 - Discrete Structures</option>
-                <option value="cs-1400">CS 1400 - Intro to Programming and Problem Solving</option>
-                <option value="cs-2250" selected>CS 2250 - Intro to Web Science</option>
-                <option value="cs-2400">CS 2400 - Data Structures and Advanced Programming</option>
-                <option value="cs-4800">CS 4800 - Software Engineering</option>
+                <option value="cs-1300" <?php if ($class_code === "cs-1300") echo "selected"; ?>>CS 1300 - Discrete
+                    Structures</option>
+                <option value="cs-1400" <?php if ($class_code === "cs-1400") echo "selected"; ?>>CS 1400 - Intro to
+                    Programming and Problem Solving</option>
+                <option value="cs-2250" <?php if ($class_code === "cs-2250") echo "selected"; ?>>CS 2250 -
+                    Intro to Web
+                    Science</option>
+                <option value="cs-2400" <?php if ($class_code === "cs-2400") echo "selected"; ?>>CS 2400 - Data
+                    Structures and Advanced Programming</option>
+                <option value="cs-4800" <?php if ($class_code === "cs-4800") echo "selected"; ?>>CS 4800 - Software
+                    Engineering</option>
             </select>
         </div>
+
+        <?php
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+                $class_code = $_POST["cs-classes"];
+
+                if ($class_code === "cs-1300") {
+                    $class_code = "cs-1300";
+                    $favorite_class = "CS 1300 - Discrete Structures";
+                } else if ($class_code === "cs-1400") {
+                    $class_code = "cs-1400";
+                    $favorite_class = "CS 1400 - Intro to Programming and Problem Solving";
+                } else if ($class_code === "cs-2250") {
+                    $class_code = "cs-2250";
+                    $favorite_class = "CS 2250 - Intro to Web Science";
+                } else if ($class_code === "cs-2400") {
+                    $class_code = "cs-2400";
+                    $favorite_class = "CS 2400 - Data Structures and Advanced Programming";
+                } else if ($class_code === "cs-4800") {
+                    $class_code = "cs-4800";
+                    $favorite_class = "CS 4800 - Software Engineering";
+                } else {
+                    $class_code = "cs-2250";
+                    $favorite_class = "CS 2250 - Intro to Web Science";
+                }
+            } 
+        ?>
 
         <h3>Form Validation Types</h3>
 
@@ -250,9 +321,10 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST")
             {
                 if (isset($_POST["text-area-input"]) && !empty($_POST["text-area-input"])) {
-                    $textAreaInputValid = true;
+                    $textarea_input_valid = true;
+                    $textarea_answer = $_POST["text-area-input"];
                 } else {
-                    echo "<p>Type your response into the text area!</p>";
+                    echo "<h4>Type your response into the text area!</h4>";
                 }
             }
 
@@ -263,6 +335,23 @@
         <br>
 
         <input type="submit" value="Submit" class="input-btn">
+
+        <?php 
+
+            if ($text_inputs_valid && $radio_inputs_valid_1 && $radio_inputs_valid_2 &&
+                $checkbox_inputs_valid && $textarea_input_valid) {
+                    echo "<p><strong>First Name: </strong>" . $fname . "</p>";
+                    echo "<p><strong>Last Name: </strong>" . $lname . "</p>";
+                    echo "<p><strong>Email: </strong>" . $email2 . "</p>";
+                    echo "<p><strong>Password: </strong>" . $password . "</p>";
+                    echo "<p><strong>Favorite Animal: </strong>" . $favorite_animal . "</p>";
+                    echo "<p><strong>Favorite Game: </strong>" . $favorite_game . "</p>";
+                    echo "<p><strong>Favorite Class: </strong>" . $favorite_class . "</p>";
+                    echo "<p><strong>Languages Used: </strong>" . $languages_used . "</p>";
+                    echo "<p><strong>Form Validation Thoughts: </strong>" . $textarea_answer . "</p>";
+            }
+
+        ?>
 
     </form>
 
