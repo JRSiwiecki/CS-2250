@@ -51,6 +51,8 @@
             <input type="password" name="password" id="password" class="text-input" placeholder="Password" required>
         </div>
 
+        <input type="button" value="Check E-mail Similarity" class="similarity-btn">
+
         <h3>Favorite Animal?</h3>
 
         <div class="input-radio-container">
@@ -124,6 +126,19 @@
                 <option value="cs-4800">CS 4800 - Software Engineering</option>
             </select>
         </div>
+
+        <h3>Form Validation Types</h3>
+
+        <div>
+            <label for="text-area-input">Describe the disadvantages of using one or less types of form input validation:
+            </label>
+            <br>
+            <textarea name="text-area-input" id="text-area-input" cols="60" rows="10"></textarea>
+        </div>
+
+        <button type="button" class="validate-btn">Validate Form</button>
+
+        <br>
 
         <input type="submit" value="Submit" class="input-btn">
 

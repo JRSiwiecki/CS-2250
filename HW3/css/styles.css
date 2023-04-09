@@ -18,6 +18,14 @@ h3 {
   text-align: start;
 }
 
+textarea {
+  text-align: start;
+}
+
+input[type="button"] {
+  margin: 5px;
+}
+
 .title {
   color: #d5b4b4;
 }
@@ -47,6 +55,10 @@ h3 {
   flex-direction: row;
   align-items: center;
   width: 500px;
+}
+
+.validate-btn {
+  margin: 5px;
 }
 
 .input-btn {
