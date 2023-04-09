@@ -70,32 +70,31 @@
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            if (isset($_POST["fname"])){
-            $fname = clean_input($_POST["fname"]);
-        } 
+            if (isset($_POST["fname"])) {
+                $fname = clean_input($_POST["fname"]);
+            } 
 
-        if (isset($_POST["lname"])){
-            $lname = clean_input($_POST["lname"]);
-        } 
+            if (isset($_POST["lname"])) {
+                $lname = clean_input($_POST["lname"]);
+            } 
 
-        if (isset($_POST["email-1"])){
-            $email1 = clean_input($_POST["email-1"]);
-        } 
+            if (isset($_POST["email-1"])) {
+                $email1 = clean_input($_POST["email-1"]);
+            } 
 
-        if (isset($_POST["email-2"])){
-            $email2 = clean_input($_POST["email-2"]);
-        } 
+            if (isset($_POST["email-2"])) {
+                $email2 = clean_input($_POST["email-2"]);
+            } 
 
-        if (isset($_POST["password"])){
-            $password = clean_input($_POST["password"]);
-        }    
+            if (isset($_POST["password"])) {
+                $password = clean_input($_POST["password"]);
+            }    
 
-        if (empty($fname) || empty($lname) || empty($email1) || empty($email2) || empty($password)) {
-            echo "<p>Not all text inputs are complete!</p>";
-        } else if ($email1 !== $email2) {
-            echo "<p>The emails are not the same!</p>";
-        }
-
+            if (empty($fname) || empty($lname) || empty($email1) || empty($email2) || empty($password)) {
+                echo "<p>Not all text inputs are complete!</p>";
+            } else if ($email1 !== $email2) {
+                echo "<p>The emails are not the same!</p>";
+            }
         } 
         
         ?>
@@ -105,36 +104,62 @@
         <h3>Favorite Animal?</h3>
 
         <div class="input-radio-container">
-            <input type="radio" name="animal-radio" id="dog-radio" value="Dog">
+            <input type="radio" name="animal-radio" id="dog-radio" value="Dog"
+                <?php if(isset($_POST["animal-radio"]) && $_POST["animal-radio"] == "Dog") {echo "checked";} ?>>
             <label for="dog-radio" class="radio-label">Dog</label>
 
             <br>
 
-            <input type="radio" name="animal-radio" id="cat-radio" value="Cat">
+            <input type="radio" name="animal-radio" id="cat-radio" value="Cat"
+                <?php if(isset($_POST["animal-radio"]) && $_POST["animal-radio"] == "Cat") {echo "checked";} ?>>
             <label for="cat-radio" class="radio-label">Cat</label>
 
             <br>
 
-            <input type="radio" name="animal-radio" id="tortoise-radio" value="Tortoise">
+            <input type="radio" name="animal-radio" id="tortoise-radio" value="Tortoise"
+                <?php if(isset($_POST["animal-radio"]) && $_POST["animal-radio"] == "Tortoise") {echo "checked";} ?>>
             <label for="tortoise-radio" class="radio-label">Tortoise</label>
         </div>
+
+        <?php 
+            if ($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                if (!isset($_POST["animal-radio"])) {
+                    echo "<p>One option must be checked!</p>";
+                }
+            }
+            
+        ?>
 
         <h3>Favorite Game?</h3>
 
         <div class="input-radio-container">
-            <input type="radio" name="game-radio" id="lol-radio" value="League of Legends">
+            <input type="radio" name="game-radio" id="lol-radio" value="League of Legends"
+                <?php if(isset($_POST["game-radio"]) && $_POST["game-radio"] == "League of Legends") {echo "checked";} ?>>
             <label for="lol-radio" class="radio-label">League of Legends</label>
 
             <br>
 
-            <input type="radio" name="game-radio" id="osu-radio" value="osu!">
+            <input type="radio" name="game-radio" id="osu-radio" value="osu!"
+                <?php if(isset($_POST["game-radio"]) && $_POST["game-radio"] == "osu!") {echo "checked";} ?>>
             <label for="osu-radio" class="radio-label">osu!</label>
 
             <br>
 
-            <input type="radio" name="game-radio" id="tarkov-radio" value="Escape from Tarkov">
+            <input type="radio" name="game-radio" id="tarkov-radio" value="Escape from Tarkov"
+                <?php if(isset($_POST["game-radio"]) && $_POST["game-radio"] == "Escape from Tarkov") {echo "checked";} ?>>
             <label for="tarkov-radio" class="radio-label">Escape from Tarkov</label>
         </div>
+
+        <?php 
+            if ($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                if (!isset($_POST["game-radio"])) {
+                    echo "<p>One option must be checked!</p>";
+                }
+            }
+            
+        ?>
 
         <h3>"Languages" Used in HW3?</h3>
 
