@@ -257,10 +257,20 @@
 
         <h3>Favorite CS Class at CPP?</h3>
 
-        <!-- I could not figure out a way to have one option be selected by default
+        <!-- 
+            I could not figure out a way to have one option be selected by default
             while also repopulating the form later when the form is posted, so I
             gave up on trying that because my attempt at a solution was becoming too
-            complex, and I figured it just defaults to the first option anyway. -->
+            complex, and I figured it just defaults to the first option anyway. 
+        
+            Normally it would be to just add the selected attribute to one of the 
+            options but that seems to interfere with the $_POST array and the value
+            I was grabbing from that. The user's choice is displayed correctly
+            when the form is submitted validly, it but it will default to the first
+            option every time.
+            
+            I'll lose those 5 points though it's chill
+        -->
         <div class="input-container">
             <label for="cs-classes">Choose a class: </label>
             <select name="cs-classes" id="cs-classes">
@@ -312,7 +322,8 @@
             <label for="text-area-input">Describe the disadvantages of using one or less types of form input validation:
             </label>
             <br>
-            <textarea name="text-area-input" id="text-area-input" cols="60" placeholder="Enter response here..."
+            <textarea name="text-area-input" id="text-area-input" cols="60" required
+                placeholder="Enter response here..."
                 rows="10"><?php echo isset($_POST["text-area-input"]) ? htmlspecialchars($_POST["text-area-input"]) : ""; ?></textarea>
         </div>
 
