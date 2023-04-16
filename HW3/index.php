@@ -274,17 +274,11 @@
         <div class="input-container">
             <label for="cs-classes">Choose a class: </label>
             <select name="cs-classes" id="cs-classes">
-                <option value="cs-1300" <?php if ($class_code === "cs-1300") echo "selected"; ?>>CS 1300 - Discrete
-                    Structures</option>
-                <option value="cs-1400" <?php if ($class_code === "cs-1400") echo "selected"; ?>>CS 1400 - Intro to
-                    Programming and Problem Solving</option>
-                <option value="cs-2250" <?php if ($class_code === "cs-2250") echo "selected"; ?>>CS 2250 -
-                    Intro to Web
-                    Science</option>
-                <option value="cs-2400" <?php if ($class_code === "cs-2400") echo "selected"; ?>>CS 2400 - Data
-                    Structures and Advanced Programming</option>
-                <option value="cs-4800" <?php if ($class_code === "cs-4800") echo "selected"; ?>>CS 4800 - Software
-                    Engineering</option>
+                <option value="cs-1300">CS 1300 - Discrete Structures</option>
+                <option value="cs-1400">CS 1400 - Intro to Programming and Problem Solving</option>
+                <option value="cs-2250" selected>CS 2250 - Intro to Web Science</option>
+                <option value="cs-2400">CS 2400 - Data Structures and Advanced Programming</option>
+                <option value="cs-4800">CS 4800 - Software Engineering</option>
             </select>
         </div>
 
