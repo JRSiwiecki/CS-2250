@@ -27,21 +27,44 @@ li:hover {
   border: solid;
   margin: 10px;
   padding: 5px;
-  display: inline-block;
   width: calc(23% - 30px); /* 10 * 2 px margin, 5 * 2 px padding = 30px */
 }
 
 /* Tablet sized view */
 @media only screen and (max-width: 960px) {
   .set {
-    width: 40%;
+    width: calc(46% - 30px);
+  }
+
+  div#Bdiv {
+    order: 2;
+  }
+
+  div#Cdiv {
+    order: 3;
+  }
+
+  div#Ddiv {
+    order: 4;
   }
 }
 
 /* Phone sized view */
 @media only screen and (max-width: 480px) {
   .set {
-    width: 100%;
+    width: calc(100% - 30px);
+  }
+
+  div#Bdiv {
+    order: 2;
+  }
+
+  div#Cdiv {
+    order: 3;
+  }
+
+  div#Ddiv {
+    order: 4;
   }
 }
 
@@ -56,17 +79,21 @@ li:hover {
 
 #Bdiv {
   background: aquamarine;
+  order: 4;
 }
 
 #Cdiv {
   background: plum;
+  order: 2;
 }
 
 #Ddiv {
   background: lightgreen;
+  order: 3;
 }
 
 #MyFoot {
   background: olive;
+  order: 5;
   width: 100%;
 }
