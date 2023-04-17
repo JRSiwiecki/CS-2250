@@ -1,10 +1,17 @@
+body {
+  background: teal;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 ul {
   list-style-type: none;
 }
 
 li {
   background: coral;
-  border: dashed;
+  border: groove;
   height: 10px;
   margin: 5px;
   padding: 10px;
@@ -20,6 +27,27 @@ li:hover {
   border: solid;
   margin: 10px;
   padding: 5px;
+  display: inline-block;
+  width: calc(23% - 30px); /* 10 * 2 px margin, 5 * 2 px padding = 30px */
+}
+
+/* Tablet sized view */
+@media only screen and (max-width: 960px) {
+  .set {
+    width: 40%;
+  }
+}
+
+/* Phone sized view */
+@media only screen and (max-width: 480px) {
+  .set {
+    width: 100%;
+  }
+}
+
+#MyTitle {
+  background: darksalmon;
+  width: 100%;
 }
 
 #Adiv {
@@ -36,4 +64,9 @@ li:hover {
 
 #Ddiv {
   background: lightgreen;
+}
+
+#MyFoot {
+  background: olive;
+  width: 100%;
 }
