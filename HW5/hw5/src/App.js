@@ -1,13 +1,15 @@
-import './App.css';
-import Header from './components/Header';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import ACVillager from "./components/ACVillager";
 
-function App() 
-{
+const App = () => {
   return (
     <div className="App">
       <Header />
+      <ACVillager />
     </div>
   );
-}
+};
 
 export default App;

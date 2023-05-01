@@ -1,6 +1,10 @@
 function Header() 
 {
-    return <h1 className="header">Joseph Siwiecki - HW5</h1>;
+    return (
+        <div className="header">
+            <h1>Joseph Siwiecki - HW5</h1>
+        </div>
+    );
 }
 
 export default Header;

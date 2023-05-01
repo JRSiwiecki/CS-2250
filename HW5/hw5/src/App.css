@@ -7,5 +7,16 @@ body {
 }
 
 .header {
-  color:aquamarine;
+  color:#7FFFD4;
+}
+
+.ac-villager-name {
+  color:indianred;
+  font-style: italic;
+}
+
+.ac-villager-img {
+  border-radius: 25%;
+  width: 300px;
+  margin: 0px 0px 15px;
 }
