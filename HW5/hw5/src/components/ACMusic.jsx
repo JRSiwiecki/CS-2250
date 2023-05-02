@@ -5,7 +5,6 @@ function ACMusic()
 {
     const [songUrl, setCurrentSong] = useState();
     
-    // Song IDs in Animal Crossing are 1 - 72
     function getCurrentHour()
     {
         const date = new Date();
@@ -27,13 +26,6 @@ function ACMusic()
     // Get current song based on hour in real time
     function getCurrentSong(songsJson, currentHour)
     {
-        let songArray = [];
-        
-        for (let song in songsJson)
-        {
-            songArray.push([song, songsJson[song]]);
-        }
-
         // Create songString to find the correct song in the songsJson
         // If the currentHour is 10 or higher, just use the currentHour
         // Otherwise, use the hour with a 0 in front of it.
