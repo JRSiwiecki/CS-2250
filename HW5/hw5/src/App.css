@@ -25,7 +25,7 @@ body {
   font-style: italic;
 }
 
-.ac-villager-button {
+.ac-villager-button, .ac-music-button {
   cursor: pointer;
   outline: 0;
   color:navy;
@@ -42,7 +42,11 @@ body {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;             
 }
 
-.ac-villager-button:hover {
+.ac-music-button {
+  margin: 0px 0px 20px 0px;
+}
+
+.ac-villager-button:hover, .ac-music-button:hover {
   color: #fff;
   background-color:green;
   border-color: #0a58ca;
