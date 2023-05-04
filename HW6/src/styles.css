@@ -78,8 +78,10 @@ body {
   display: table;
 }
 
-.status {
+.game-status {
+  font-size: 64px;
   margin-bottom: 10px;
+  color:antiquewhite;
 }
 .game {
   display: flex;

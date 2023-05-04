@@ -16,7 +16,7 @@ export default function Board() {
 
   function handleClick(i)
   {
-    if (squares[i] !== null)
+    if (squares[i] !== null || checkForWinner(squares))
     {
       return;
     }
@@ -36,9 +36,29 @@ export default function Board() {
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
   }
+
+  function resetGame()
+  {
+    setXIsNext(true);
+    setSquares(Array(9).fill(null));
+  }
+  
+  const winner = checkForWinner(squares);
+  let gameStatus;
+
+  if (winner)
+  {
+    gameStatus = "Winner: " + winner;
+  }
+
+  else 
+  {
+    gameStatus = "Next Player: " + (xIsNext ? "X" : "O");
+  }
   
   return (
     <>
+      <div className="game-status">{gameStatus}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
         <Square value={squares[1]} onSquareClick={() => handleClick(1)}/>
@@ -56,6 +76,35 @@ export default function Board() {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)}/>
         <Square value={squares[8]} onSquareClick={() => handleClick(8)}/>
       </div>
+
+      <button onClick={resetGame}>Reset Game</button>
     </>
   );
+}
+
+function checkForWinner(squares)
+{
+  const winningLines = [
+    [0, 1, 2], 
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ];
+
+  for (let i = 0; i < winningLines.length; i++)
+  {
+    const [a, b, c] = winningLines[i];
+
+    if (squares[a] 
+      && squares[a] === squares[b] 
+      && squares[a] === squares[c])
+      {
+        return squares[a];
+      }
+  }
+  return null;
 }
